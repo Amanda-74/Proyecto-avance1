@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -12,7 +14,7 @@
 </head>
 <body>
     <header>
-      <h1>Bienvenido!! Invitado - #1234567</h1>
+      <h1>Bienvenido al Cajero Automático</h1>
       
   </header>
 
@@ -42,12 +44,26 @@
         <a class="nav-link" href="grafica.html">Grafico</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="login.html">Salir</a>
+        <button class="btn btn-secondary" onclick="logout()">Salir</button>
       </li>
     </ul>
   </div>
 </div>
 </nav>
+    
+    <div class="container mt-5">
+        
+        <div id="user-info">
+            <h3>Bienvenido, <span id="user-name"></span></h3>
+            <p><strong>Número de cuenta:</strong> <span id="account-number"></span></p>
+            <p><strong>Saldo inicial:</strong> <span id="initial-balance"></span></p>
+            <button class="btn btn-primary" onclick="selectTransaction()">Seleccionar Transacción</button>
+            <button class="btn btn-secondary" onclick="logout()">Salir</button>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+
+
 
 <hr>
 
@@ -110,5 +126,3 @@
 </footer>
 </body>
 </html>
-
-

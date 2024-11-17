@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pago de Servicios</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" 
@@ -49,9 +51,10 @@
   </div>
   </nav>
   
+  <body>
     <div class="container mt-5">
         <h2 class="text-center">Pago de Servicios</h2>
-        <form>
+        <form id="payment-form">
             <div class="form-group">
                 <label for="service">Servicio</label>
                 <select class="form-control" id="service">
@@ -63,18 +66,20 @@
             </div>
             <div class="form-group">
                 <label for="accountNumber">Número de Cuenta</label>
-                <input type="text" class="form-control" id="accountNumber" placeholder="Ingrese su número de cuenta">
+                <input type="text" class="form-control" id="accountNumber" placeholder="Ingrese su número de cuenta" required>
             </div>
             <div class="form-group">
                 <label for="amount">Monto a Pagar</label>
-                <input type="number" class="form-control" id="amount" placeholder="Ingrese el monto a pagar">
+                <input type="number" class="form-control" id="amount" placeholder="Ingrese el monto a pagar" required>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Pagar</button>
         </form>
     </div>
-
+    <script src="js/pago.js"></script>
+</body>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
 </body>
 </html>
